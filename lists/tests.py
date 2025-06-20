@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.urls import resolve
 from lists.views import home_page
 from django.template.loader import render_to_string
-from lists.models import Item
+from lists.models import Item, List
 
 
 class HomePageTest(TestCase):
@@ -13,24 +13,36 @@ class HomePageTest(TestCase):
         self.assertTemplateUsed(response, "home.html")
 
 
-class ItemModelTest(TestCase):
+class ListAndItemModelsTest(TestCase):
 
-    def test_saving_and_retrieving(self):
+    def test_saving_and_retrieving_items(self):
+
+        list_items = List()
+        list_items.save()
+
         first_item = Item()
         first_item.text = "The first (ever) list item"
+        first_item.list = list_items
         first_item.save()
 
         second_item = Item()
         second_item.text = "Item the second"
+        second_item.list = list_items
         second_item.save()
+
+        saved_list = List.objects.first()
+        self.assertEqual(saved_list, list_items)
 
         saved_items = Item.objects.all()
         self.assertEqual(saved_items.count(), 2)
 
         first_saved_item = saved_items[0]
         second_saved_item = saved_items[1]
+
         self.assertEqual(first_saved_item.text, "The first (ever) list item")
+        self.assertEqual(first_saved_item.list, list_items)
         self.assertEqual(second_saved_item.text, "Item the second")
+        self.assertEqual(second_saved_item.list, list_items)
 
 
 class ListViewTest(TestCase):
@@ -40,8 +52,9 @@ class ListViewTest(TestCase):
         self.assertTemplateUsed(response, "list.html")
 
     def test_displays_all_items(self):
-        Item.objects.create(text="Itemey 1")
-        Item.objects.create(text="Itemey 2")
+        list_items = List.objects.create()
+        Item.objects.create(text="Itemey 1", list=list_items)
+        Item.objects.create(text="Itemey 2", list=list_items)
 
         response = self.client.get("/lists/the-only-list-in-the-world/")
 
