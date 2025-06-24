@@ -1,0 +1,67 @@
+{
+    "child": {
+        "child1": {
+            "child1": {
+                "directory": "\/home\/miqueiaspenha\/Projects\/Python\/tdd-python-django-selenium",
+                "height": 501,
+                "profile": "2b7c4080-0ddd-46c5-8f23-563fd3ba789d",
+                "readOnly": false,
+                "synchronizedInput": true,
+                "type": "Terminal",
+                "uuid": "bed7604f-6d95-47bc-9e0e-030f794954d2",
+                "width": 960
+            },
+            "child2": {
+                "directory": "\/home\/miqueiaspenha\/Projects\/Python\/tdd-python-django-selenium",
+                "height": 501,
+                "profile": "2b7c4080-0ddd-46c5-8f23-563fd3ba789d",
+                "readOnly": false,
+                "synchronizedInput": true,
+                "type": "Terminal",
+                "uuid": "39fac7ea-9942-4324-a72b-ef429ad25d36",
+                "width": 959
+            },
+            "orientation": 0,
+            "position": 50,
+            "ratio": 0.5,
+            "type": "Paned"
+        },
+        "child2": {
+            "child1": {
+                "directory": "\/home\/miqueiaspenha\/Projects\/Python\/tdd-python-django-selenium",
+                "height": 500,
+                "profile": "2b7c4080-0ddd-46c5-8f23-563fd3ba789d",
+                "readOnly": false,
+                "synchronizedInput": true,
+                "type": "Terminal",
+                "uuid": "e7fae29f-2e54-46f5-9a42-6ab15c106f0a",
+                "width": 960
+            },
+            "child2": {
+                "directory": "\/home\/miqueiaspenha\/Projects\/Python\/tdd-python-django-selenium",
+                "height": 500,
+                "profile": "2b7c4080-0ddd-46c5-8f23-563fd3ba789d",
+                "readOnly": false,
+                "synchronizedInput": true,
+                "type": "Terminal",
+                "uuid": "b24f5ad7-6dc3-4394-a10c-de1dbd99cf41",
+                "width": 959
+            },
+            "orientation": 0,
+            "position": 50,
+            "ratio": 0.5,
+            "type": "Paned"
+        },
+        "orientation": 1,
+        "position": 50,
+        "ratio": 0.5,
+        "type": "Paned"
+    },
+    "height": 1002,
+    "name": "${title}",
+    "synchronizedInput": false,
+    "type": "Session",
+    "uuid": "36611434-fa80-4f7b-9c99-1d02de308f7f",
+    "version": "1.0",
+    "width": 1920
+}
