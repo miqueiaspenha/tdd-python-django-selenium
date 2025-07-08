@@ -6,5 +6,10 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "django>=5.2.3",
+    "gunicorn>=23.0.0",
+]
+
+[dependency-groups]
+dev = [
     "selenium>=4.33.0",
 ]
